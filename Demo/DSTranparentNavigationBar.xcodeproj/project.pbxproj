@@ -15,7 +15,6 @@
 		7E9593B419ECC456000397B6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E9593B219ECC456000397B6 /* LaunchScreen.xib */; };
 		7E9593C019ECC456000397B6 /* DSTranparentNavigationBarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9593BF19ECC456000397B6 /* DSTranparentNavigationBarTests.m */; };
 		7E9593CC19ECC56A000397B6 /* DSNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9593CB19ECC56A000397B6 /* DSNavigationBar.m */; };
-		7EF8833419ECC99D00729F36 /* UIImage+initWithColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF8833319ECC99D00729F36 /* UIImage+initWithColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +43,6 @@
 		7E9593BF19ECC456000397B6 /* DSTranparentNavigationBarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSTranparentNavigationBarTests.m; sourceTree = "<group>"; };
 		7E9593CA19ECC56A000397B6 /* DSNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSNavigationBar.h; path = DSNavigationBar/DSNavigationBar.h; sourceTree = "<group>"; };
 		7E9593CB19ECC56A000397B6 /* DSNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSNavigationBar.m; path = DSNavigationBar/DSNavigationBar.m; sourceTree = "<group>"; };
-		7EF8833219ECC99D00729F36 /* UIImage+initWithColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+initWithColor.h"; sourceTree = "<group>"; };
-		7EF8833319ECC99D00729F36 /* UIImage+initWithColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+initWithColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,8 +126,6 @@
 		7E9593C919ECC46D000397B6 /* DSTranparentNavigationBar */ = {
 			isa = PBXGroup;
 			children = (
-				7EF8833219ECC99D00729F36 /* UIImage+initWithColor.h */,
-				7EF8833319ECC99D00729F36 /* UIImage+initWithColor.m */,
 				7E9593CA19ECC56A000397B6 /* DSNavigationBar.h */,
 				7E9593CB19ECC56A000397B6 /* DSNavigationBar.m */,
 			);
@@ -237,7 +232,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EF8833419ECC99D00729F36 /* UIImage+initWithColor.m in Sources */,
 				7E9593CC19ECC56A000397B6 /* DSNavigationBar.m in Sources */,
 				7E9593AC19ECC456000397B6 /* ViewController.m in Sources */,
 				7E9593A919ECC456000397B6 /* AppDelegate.m in Sources */,

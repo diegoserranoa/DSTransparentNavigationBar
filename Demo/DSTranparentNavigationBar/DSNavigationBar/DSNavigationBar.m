@@ -12,6 +12,26 @@
 
 @implementation DSNavigationBar
 
+static CGFloat kEndPoint = 1.5;
+
+void drawLinearGradient(CGContextRef context, CGRect rect, CGColorRef startColor, CGColorRef endColor)
+{
+     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+     CGFloat locations[] = { 0.0, 1.0 };
+     
+     NSArray *colors = @[(__bridge id) startColor, (__bridge id) endColor];
+     
+     CGGradientRef gradient = CGGradientCreateWithColors(colorSpace, (__bridge CFArrayRef) colors, locations);
+     CGPoint startPoint = CGPointMake(rect.size.width/2, 0);
+     CGPoint endPoint = CGPointMake(rect.size.width/2, rect.size.height/kEndPoint);
+     
+     CGContextSaveGState(context);
+     CGContextAddRect(context, rect);
+     CGContextClip(context);
+     CGContextDrawLinearGradient(context, gradient, startPoint, endPoint, 0);
+     CGContextSetStrokeColorWithColor(context, [[UIColor clearColor] CGColor]);
+}
+
 - (UIImage *)imageWithColor:(UIColor *)color
 {
     CGRect rect = CGRectMake(0, 0, 1, 1);
@@ -28,49 +48,12 @@
 - (UIImage *)imageWithGradients:(NSArray *)colours
 {
     CGRect rect = CGRectMake(0, 0, 1, 1);
-    
-    CGFloat lineWidth = 0.1f;
-    
-    // create a 1 by 1 pixel context
     UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0);
-    
-    
-    //    set RGB color space
-    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    //    set draw context
     CGContextRef context = UIGraphicsGetCurrentContext();
-    //    set two color for gradient
-    //    if you need more color gradient
-    //    just add it
     UIColor * beginColor = [colours objectAtIndex:0];
     UIColor * endColor = [colours objectAtIndex:1];
-    
-    //    set color to array
-    NSArray *gradientColors = [NSArray arrayWithObjects:(id)beginColor.CGColor, (id)endColor.CGColor, nil];
-    CGFloat gradientLocation[] = {0, 1};
-    //    set gradient info
-    CGGradientRef gradient = CGGradientCreateWithColors(colorSpace, (__bridge CFArrayRef)gradientColors, gradientLocation);
-    
-    //    set rectangle path for bezier path
-    UIBezierPath *bezierPath = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0, rect.size.width, rect.size.height)];
-    CGContextSaveGState(context);
-    [bezierPath addClip];
-    
-    //    set gradient start point and end point
-    CGPoint beginPoint = CGPointMake(rect.size.width/2, 0);
-    CGPoint endPoint = CGPointMake(rect.size.width/2, rect.size.height/2);
-    
-    //    add position to linear gradient
-    CGContextDrawLinearGradient(context, gradient, beginPoint, endPoint, 0);
-    //    set sideline info
-    CGContextSetStrokeColorWithColor(context, [[UIColor clearColor] CGColor]);
-    //    draw sideline
-    [bezierPath setLineWidth:lineWidth];
-    //    fill gradient color
-    [bezierPath stroke];
-    
+    drawLinearGradient(context, rect, beginColor.CGColor, endColor.CGColor);
     CGContextRestoreGState(context);
-    
     
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
