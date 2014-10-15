@@ -21,21 +21,22 @@
     // Override point for customization after application launch.
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
                                                              bundle: nil];
-    
+    /*
     UINavigationController *navigationController = [[UINavigationController alloc] initWithNavigationBarClass:[DSNavigationBar class] toolbarClass:nil];
     
     UIColor * color = [UIColor colorWithRed:(190/255.0) green:(218/255.0) blue:(218/255) alpha:0.5f];
     [[DSNavigationBar appearance] setNavigationBarWithColor:color];
-    /*
+     
+     
     UIColor *topColor = [UIColor colorWithRed:(190/255.0) green:(218/255.0) blue:(218/255) alpha:1.0f];
     UIColor *bottomColor = [UIColor colorWithRed:(190/255.0) green:(218/255.0) blue:(218/255) alpha:0];
     [[DSNavigationBar appearance] setNavigationBarWithColors:@[topColor,bottomColor]];
-     */
     
     
     UIViewController *vc = [mainStoryboard instantiateViewControllerWithIdentifier:@"initial"];
     [navigationController setViewControllers:@[vc]];
     [self.window setRootViewController:navigationController];
+    */
     return YES;
 }
 

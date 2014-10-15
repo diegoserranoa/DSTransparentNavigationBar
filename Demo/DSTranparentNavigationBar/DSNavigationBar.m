@@ -8,12 +8,51 @@
 
 #import "DSNavigationBar.h"
 #import <QuartzCore/QuartzCore.h>
-//#import "UIImage+initWithColor.h"
 
 @implementation DSNavigationBar
 
 static CGFloat kEndPoint = 1.5;
 
+-(void)awakeFromNib
+{
+    [super awakeFromNib];
+    if (self.color) {
+        [self setNavigationBarWithColor:self.color];
+    } else {
+        [self setNavigationBarWithColor:[UIColor whiteColor]];
+    }
+}
+
+/*
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    
+    self = [super initWithCoder:aDecoder];
+    
+    if (self) {
+        if (self.color) {
+            [self setNavigationBarWithColor:self.color];
+        } else {
+            [self setNavigationBarWithColor:[UIColor whiteColor]];
+    }
+    
+    return self;
+}
+
+-(id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    
+    if (self) {
+        if (self.color) {
+            [self setNavigationBarWithColor:self.color];
+        } else {
+            [self setNavigationBarWithColor:[UIColor whiteColor]];
+        }
+    }
+    
+    return self;
+}
+*/
 void drawLinearGradient(CGContextRef context, CGRect rect, CGColorRef startColor, CGColorRef endColor)
 {
      CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
@@ -84,7 +123,6 @@ void drawLinearGradient(CGContextRef context, CGRect rect, CGColorRef startColor
     [self setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
     [self setTintColor:[UIColor whiteColor]];
     [self setTranslucent:YES];
-    
 }
 
 
