@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+IB_DESIGNABLE
+
 @interface DSNavigationBar : UINavigationBar
+
+@property (strong, nonatomic) IBInspectable UIColor *color;
 
 -(void)setNavigationBarWithColor:(UIColor *)color;
 -(void)setNavigationBarWithColors:(NSArray *)colours;
