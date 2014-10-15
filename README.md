@@ -12,6 +12,14 @@ UINavigationBar that allows to set a transparency colors.
 
 ## Usage
 
+Interface Builder
+
+Select the NavigationBar from the Navigation Controller in the Interface Builder. Then, in Utilities -> Identity Inspector select DSNavigationBar as the Class.
+
+![IB screenshot](https://github.com/diegoserranoa/DSTransparentNavigationBar/blob/master/img/ib.png)
+
+Programatically
+
 In the AppDelegate import the header file and set the navigationBar class to DSNavigationBar
 
 ```objective-c
@@ -38,3 +46,4 @@ UIColor *bottomColor = [UIColor colorWithRed:(190/255.0) green:(218/255.0) blue:
  
 ## TODO
 - Swift implementation
+- iOS 7 support.
