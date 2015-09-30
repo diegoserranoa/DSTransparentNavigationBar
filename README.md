@@ -27,7 +27,7 @@ In the AppDelegate import the header file and set the navigationBar class to DSN
 
 UINavigationController *navigationController = [[UINavigationController alloc] initWithNavigationBarClass:[DSNavigationBar class] toolbarClass:nil];
 
-// create a color and set it to the DSNavigationBar appereance
+// create a color and set it to the DSNavigationBar appearance
 UIColor * color = [UIColor colorWithRed:(190/255.0) green:(218/255.0) blue:(218/255) alpha:0.5f];
 [[DSNavigationBar appearance] setNavigationBarWithColor:color];
 
