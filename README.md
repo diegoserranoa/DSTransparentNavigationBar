@@ -1,4 +1,4 @@
-DSTransparentNavigationBar
+DSTransparentNavigationBar##
 ==========================
 
 UINavigationBar that allows to set a transparency colors.
