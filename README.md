@@ -44,6 +44,6 @@ UIColor *bottomColor = [UIColor colorWithRed:(190/255.0) green:(218/255.0) blue:
 ## License
  Under the MIT license. More info on the LICENSE file.
  
-## TODO
+## To-Do
 - Swift implementation
 - iOS 7 support.
