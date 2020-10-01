@@ -1,7 +1,7 @@
 DSTransparentNavigationBar
 ==========================
 
-UINavigationBar that allows to set a transparency colors.
+UINavigationBar that allows to set a transparency in colors.
 
 
 ![zero alpha](https://github.com/diegoserranoa/DSTransparentNavigationBar/blob/master/img/alpha0.png)
